@@ -3,9 +3,7 @@ public class Solution
     public string LongestCommonPrefix(string[] strs) 
     {
         if (strs == null || strs.Length == 0)
-        {
             return "";
-        }
         
         var prefix = new StringBuilder();
         var temporaryPrefixes = new string[strs.Length];
