@@ -7,7 +7,7 @@ public class Solution
             return "";
         }
         
-        var prefix = "";
+        var prefix = new StringBuilder();
         var temporaryPrefixes = new string[strs.Length];
         
         for(var wordCounter = 0; wordCounter < strs[0].Length; wordCounter++)
@@ -17,11 +17,11 @@ public class Solution
             for(var i = 1; i < strs.Length; i++)
             {
                 if(wordCounter >= strs[i].Length || strs[i][wordCounter] != tempChar)
-                    return prefix;
+                    return prefix.ToString();
             }
-            prefix += tempChar;
+            prefix.Append(tempChar);
         }
         
-        return prefix;
+        return prefix.ToString();
     }
 }
